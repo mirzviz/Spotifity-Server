@@ -5,9 +5,9 @@ var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
 
 const dotenv = require('dotenv').config({path: __dirname + '/.env'}); 
-if (dotenv.error) {
-  throw dotenv.error
-}
+// if (dotenv.error) {
+//   throw dotenv.error
+// }
 // console.log(dotenv.parsed);
 
 var client_id = process.env.CLIENT_ID; // Your client id
