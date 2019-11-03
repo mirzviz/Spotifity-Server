@@ -4,7 +4,7 @@ var cors = require('cors');
 var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
 
-const dotenv = require('dotenv').config({path: __dirname + '/.env'}); 
+const dotenv = require('dotenv').config(); 
 // if (dotenv.error) {
 //   throw dotenv.error
 // }
