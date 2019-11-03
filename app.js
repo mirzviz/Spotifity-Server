@@ -13,7 +13,7 @@ const dotenv = require('dotenv').config({ silent: true });
 var client_id = process.env.CLIENT_ID; // Your client id
 var client_secret = process.env.CLIENT_SECRET; // Your secret
 // var redirect_uri =  process.env.REDIRECT_URI; // Your redirect uri
-var redirect_uri =  `http://localhost:${process.env.PORT}/callback`;
+var redirect_uri =  "https://spotifity-server.herokuapp.com/callback";
 
 /**
  * Generates a random string containing numbers and letters
