@@ -103,7 +103,7 @@ app.get('/callback', function(req, res) {
 
         // we can also pass the token to the browser to make requests from there
         //http://localhost:3000
-        res.redirect('https://supify.herokuapp.com/#' +  
+        res.redirect('/#' +  
           querystring.stringify({
             access_token: access_token,
             refresh_token: refresh_token
