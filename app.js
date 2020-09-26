@@ -12,8 +12,9 @@ const dotenv = require('dotenv').config({ silent: true });
 
 var client_id = process.env.CLIENT_ID; // Your client id
 var client_secret = process.env.CLIENT_SECRET; // Your secret
-// var redirect_uri =  process.env.REDIRECT_URI; // Your redirect uri
-var redirect_uri =  "https://spotifity-server.herokuapp.com/callback";
+var redirect_uri =  process.env.REDIRECT_URI; // Your redirect uri
+var client_app_uri = process.env.CLIENT_APP_URI;
+//var redirect_uri =  "https://spotifity-server.herokuapp.com/callback";
 
 /**
  * Generates a random string containing numbers and letters
@@ -103,7 +104,7 @@ app.get('/callback', function(req, res) {
 
         // we can also pass the token to the browser to make requests from there
         //http://localhost:3000
-        res.redirect('https://supify.herokuapp.com/#' +  
+        res.redirect(client_app_uri +  
           querystring.stringify({
             access_token: access_token,
             refresh_token: refresh_token
